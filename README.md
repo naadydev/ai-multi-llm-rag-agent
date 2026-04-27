@@ -2,7 +2,10 @@
 
 A full-stack **Retrieval-Augmented Generation (RAG)** Ai Agent that lets you upload PDFs and chat with them. Answers are grounded in the document and cite specific page numbers, so every response is traceable back to the source.
 
-Built as a hands-on learning project to explore modern AI-agent tooling end to end — from PDF ingestion and vector storage, to a ReAct agent with tool calling, to a streaming-ready React chat UI.
+- AI-agent tooling end to end
+- PDF ingestion
+- vector storage,
+- ReAct agent with tool calling -> streaming-ready React chat UI.
 
 ---
 
