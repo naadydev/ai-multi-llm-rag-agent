@@ -65,13 +65,13 @@ Built as a hands-on learning project to explore modern AI-agent tooling end to e
 ## Tech stack
 
 **Backend** (`rag_agent_server/`)
-- Node.js 20+, TypeScript, **Fastify 5**
 - **LangChain 1.x**, **LangGraph 1.x** (`createAgent`, `MemorySaver`)
 - **Pinecone** (`@langchain/pinecone`) for vector storage
 - **OpenAI** (`@langchain/openai`) and **Ollama** (`@langchain/ollama`) chat models
 - `pdf-parse` / `pdfjs-dist` for PDF text extraction
 - **Zod** for runtime validation, **Vitest** for tests
 - **LangSmith** for tracing (optional)
+- Node.js 20+, TypeScript, **Fastify 5**
 
 **Frontend** (`rag_agent_client/`)
 - **React 19**, **Vite 8**, **TypeScript**
