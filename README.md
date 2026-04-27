@@ -18,7 +18,6 @@ A full-stack **Retrieval-Augmented Generation (RAG)** AI agent that lets you upl
 - PDF ingestion pipeline (parse → chunk → embed)
 - Vector storage with per-document isolation (Pinecone namespaces)
 - Pluggable LLM providers — **OpenAI** (cloud) or **Ollama** (local)
-- React 19 + Tailwind chat UI with a document sidebar
 
 ---
 
