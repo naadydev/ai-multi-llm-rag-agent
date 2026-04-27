@@ -8,9 +8,6 @@
 ![Ollama](https://img.shields.io/badge/Ollama-local-000000?logo=ollama&logoColor=white)
 ![Pinecone](https://img.shields.io/badge/Pinecone-vector%20db-2BB7E0?logo=pinecone&logoColor=white)
 
-**Project**
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-
 > **Pick an LLM (local or cloud) → Upload a PDF → Get cited answers.**
 
 A full-stack **Retrieval-Augmented Generation (RAG)** AI agent that lets you upload PDFs and chat with them. Answers are grounded in the document and cite specific page numbers, so every response is traceable back to the source.
