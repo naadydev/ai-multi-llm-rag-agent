@@ -1,5 +1,5 @@
 # AI Multi-LLM RAG Agent
-
+Choos Local LLM OR Cloud LLM -> Upload PDF -> Ask Question 
 A full-stack **Retrieval-Augmented Generation (RAG)** Ai Agent that lets you upload PDFs and chat with them. Answers are grounded in the document and cite specific page numbers, so every response is traceable back to the source.
 
 - AI-agent tooling end to end
