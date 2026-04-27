@@ -7,7 +7,7 @@
 ![Pinecone](https://img.shields.io/badge/Pinecone-vector%20db-2BB7E0)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-> **Choose a Local or Cloud LLM → Upload a PDF → Ask Questions → Get cited answers.**
+> **Pick an LLM (local or cloud) → Upload a PDF → Get cited answers.**
 
 A full-stack **Retrieval-Augmented Generation (RAG)** AI agent that lets you upload PDFs and chat with them. Answers are grounded in the document and cite specific page numbers, so every response is traceable back to the source.
 
