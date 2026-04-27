@@ -12,8 +12,6 @@
 
 A full-stack **Retrieval-Augmented Generation (RAG)** AI agent that lets you upload PDFs and chat with them. Answers are grounded in the document and cite specific page numbers, so every response is traceable back to the source.
 
-**What's inside, end to end:**
-
 - AI-agent tooling (LangChain + LangGraph ReAct agent with tool calling)
 - PDF ingestion pipeline (parse → chunk → embed)
 - Vector storage with per-document isolation (Pinecone namespaces)
