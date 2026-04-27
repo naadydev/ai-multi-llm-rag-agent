@@ -1,12 +1,23 @@
 # AI Multi-LLM RAG Agent
-Choos Local LLM OR Cloud LLM -> Upload PDF -> Ask Question
 
-A full-stack **Retrieval-Augmented Generation (RAG)** Ai Agent that lets you upload PDFs and chat with them. Answers are grounded in the document and cite specific page numbers, so every response is traceable back to the source.
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-20+-339933?logo=node.js&logoColor=white)
+![React 19](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
+![LangGraph](https://img.shields.io/badge/LangGraph-1.x-1C3C3C)
+![Pinecone](https://img.shields.io/badge/Pinecone-vector%20db-2BB7E0)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-- AI-agent tooling end to end
-- PDF ingestion
-- Vector Storage,
-- ReAct agent with tool calling -> streaming-ready React chat UI.
+> **Choose a Local or Cloud LLM → Upload a PDF → Ask Questions → Get cited answers.**
+
+A full-stack **Retrieval-Augmented Generation (RAG)** AI agent that lets you upload PDFs and chat with them. Answers are grounded in the document and cite specific page numbers, so every response is traceable back to the source.
+
+**What's inside, end to end:**
+
+- AI-agent tooling (LangChain + LangGraph ReAct agent with tool calling)
+- PDF ingestion pipeline (parse → chunk → embed)
+- Vector storage with per-document isolation (Pinecone namespaces)
+- Pluggable LLM providers — **OpenAI** (cloud) or **Ollama** (local)
+- React 19 + Tailwind chat UI with a document sidebar
 
 ---
 
