@@ -4,7 +4,7 @@ A full-stack **Retrieval-Augmented Generation (RAG)** Ai Agent that lets you upl
 
 - AI-agent tooling end to end
 - PDF ingestion
-- vector storage,
+- Vector Storage,
 - ReAct agent with tool calling -> streaming-ready React chat UI.
 
 ---
