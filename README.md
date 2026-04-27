@@ -4,23 +4,6 @@ A full-stack **Retrieval-Augmented Generation (RAG)** application that lets you 
 
 Built as a hands-on learning project to explore modern AI-agent tooling end to end — from PDF ingestion and vector storage, to a ReAct agent with tool calling, to a streaming-ready React chat UI.
 
-![RAG Agent chat UI — answering from sample.pdf with the local Ollama provider](docs/chat.png)
-
-> *The included [`sample.pdf`](docs/sample.pdf) loaded in the sidebar, the local **Ollama** model selected, and the agent correctly identifying the tech lead of Squad Vega from page 3.*
-
----
-
-## Highlights
-
-- **Two LLM providers, one agent** — swap between **OpenAI** (hosted) and **Ollama** (local) per request without touching the agent code. Demonstrates a clean provider abstraction over `BaseChatModel`.
-- **LangGraph ReAct agent** with tool use, system prompts, and thread-scoped conversational memory (`MemorySaver` keyed by `thread_id`).
-- **Per-document Pinecone namespaces** — every uploaded PDF gets its own isolated vector space; the retriever tool is bound to that namespace at agent-build time.
-- **PDF ingestion pipeline** with MIME and magic-byte validation, chunking (`RecursiveCharacterTextSplitter`), and batched upserts.
-- **Cited answers** — the system prompt requires the agent to surface page numbers from retrieved chunks, or admit it doesn't know.
-- **LangSmith tracing** wired implicitly via env vars — every run/turn is grouped by thread for easy debugging.
-- **Versioned REST API** (`/api/v1`) on Fastify with Zod validation, multipart upload limits, and CORS.
-- **Modern frontend** — React 19 + Vite + Tailwind 4 with a sidebar (document list) and chat pane.
-
 ---
 
 ## Architecture
@@ -57,6 +40,25 @@ Built as a hands-on learning project to explore modern AI-agent tooling end to e
 2. Server builds a fresh `ReAct` agent: LLM (OpenAI or Ollama), system prompt, retriever tool bound to the document's Pinecone namespace, shared `MemorySaver` checkpointer.
 3. Agent decides whether to call the retriever; retrieved chunks (with page metadata) flow back into the LLM context.
 4. LLM produces a cited answer; turn is checkpointed under `thread_id` so follow-ups have history.
+
+---
+
+![RAG Agent chat UI — answering from sample.pdf with the local Ollama provider](docs/chat.png)
+
+> *The included [`sample.pdf`](docs/sample.pdf) loaded in the sidebar, the local **Ollama** model selected, and the agent correctly identifying the tech lead of Squad Vega from page 3.*
+
+---
+
+## Highlights
+
+- **Two LLM providers, one agent** — swap between **OpenAI** (hosted) and **Ollama** (local) per request without touching the agent code. Demonstrates a clean provider abstraction over `BaseChatModel`.
+- **LangGraph ReAct agent** with tool use, system prompts, and thread-scoped conversational memory (`MemorySaver` keyed by `thread_id`).
+- **Per-document Pinecone namespaces** — every uploaded PDF gets its own isolated vector space; the retriever tool is bound to that namespace at agent-build time.
+- **PDF ingestion pipeline** with MIME and magic-byte validation, chunking (`RecursiveCharacterTextSplitter`), and batched upserts.
+- **Cited answers** — the system prompt requires the agent to surface page numbers from retrieved chunks, or admit it doesn't know.
+- **LangSmith tracing** wired implicitly via env vars — every run/turn is grouped by thread for easy debugging.
+- **Versioned REST API** (`/api/v1`) on Fastify with Zod validation, multipart upload limits, and CORS.
+- **Modern frontend** — React 19 + Vite + Tailwind 4 with a sidebar (document list) and chat pane.
 
 ---
 
