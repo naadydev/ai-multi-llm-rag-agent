@@ -1,10 +1,27 @@
 # AI Multi-LLM RAG Agent
 
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-20+-339933?logo=node.js&logoColor=white)
-![React 19](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
+**AI / RAG**
+![LangChain](https://img.shields.io/badge/LangChain-1.x-1C3C3C?logo=langchain&logoColor=white)
 ![LangGraph](https://img.shields.io/badge/LangGraph-1.x-1C3C3C)
-![Pinecone](https://img.shields.io/badge/Pinecone-vector%20db-2BB7E0)
+![LangSmith](https://img.shields.io/badge/LangSmith-tracing-1C3C3C)
+![OpenAI](https://img.shields.io/badge/OpenAI-API-412991?logo=openai&logoColor=white)
+![Ollama](https://img.shields.io/badge/Ollama-local-000000?logo=ollama&logoColor=white)
+![Pinecone](https://img.shields.io/badge/Pinecone-vector%20db-2BB7E0?logo=pinecone&logoColor=white)
+
+**Backend**
+![Node.js](https://img.shields.io/badge/Node.js-20+-339933?logo=node.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
+![Fastify](https://img.shields.io/badge/Fastify-5-000000?logo=fastify&logoColor=white)
+![Zod](https://img.shields.io/badge/Zod-validation-3E67B1?logo=zod&logoColor=white)
+![Vitest](https://img.shields.io/badge/Vitest-tests-6E9F18?logo=vitest&logoColor=white)
+
+**Frontend**
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
+![Vite](https://img.shields.io/badge/Vite-8-646CFF?logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?logo=tailwindcss&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
+
+**Project**
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 > **Pick an LLM (local or cloud) → Upload a PDF → Get cited answers.**
