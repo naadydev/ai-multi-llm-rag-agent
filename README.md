@@ -4,6 +4,10 @@ A full-stack **Retrieval-Augmented Generation (RAG)** application that lets you 
 
 Built as a hands-on learning project to explore modern AI-agent tooling end to end — from PDF ingestion and vector storage, to a ReAct agent with tool calling, to a streaming-ready React chat UI.
 
+![RAG Agent chat UI — answering from sample.pdf with the local Ollama provider](docs/chat.png)
+
+> *The included [`sample.pdf`](docs/sample.pdf) loaded in the sidebar, the local **Ollama** model selected, and the agent correctly identifying the tech lead of Squad Vega from page 3.*
+
 ---
 
 ## Highlights
