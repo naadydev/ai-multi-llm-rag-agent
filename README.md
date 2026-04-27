@@ -106,6 +106,40 @@ npm run dev
 
 ---
 
+## Try it — sample PDF & questions
+
+A ready-made test document is included at **[`docs/sample.pdf`](docs/sample.pdf)** — a 6-page fictional engineering handbook for "Project Aurora." The facts are intentionally made up so the agent **must** use retrieval to answer (it can't fall back on training data), which makes the page citations meaningful.
+
+> If you want to regenerate or edit it, the script is [`docs/make_sample_pdf.py`](docs/make_sample_pdf.py) (`pip install reportlab && python3 docs/make_sample_pdf.py`).
+
+### Suggested questions
+
+Upload `docs/sample.pdf` in the UI, then try these — each targets a specific page so you can verify citations work:
+
+| Question | Expected page | What it tests |
+| --- | --- | --- |
+| *What services make up Project Aurora and what does each do?* | 2 | Multi-fact retrieval |
+| *What programming language and version is Aurora written in?* | 2 | Specific detail (Go 1.23) |
+| *Who is the tech lead of Squad Vega?* | 3 | Named-entity lookup (Renata Salgado) |
+| *What is the p99 latency SLO for Lumen on cache hits?* | 4 | Numeric fact (under 250 ms) |
+| *Can I deploy on a Friday at 4 PM UTC?* | 5 | Policy reasoning (no — frozen after 14:00) |
+| *How long are database backups retained?* | 4 / 6 | Cross-page consistency (35 days) |
+| *What is Northstar?* | 2 / 6 | Glossary lookup (internal CA) |
+
+### Edge-case questions (test grounding)
+
+These help confirm the agent stays honest and doesn't hallucinate:
+
+- *"What is the salary of the on-call engineer?"* → should say it's not in the document.
+- *"Who founded Project Aurora?"* → not stated; the agent should admit so rather than guess.
+- *"Compare Aurora's architecture to AWS Lambda."* → should stick to what's in the PDF.
+
+### Provider comparison
+
+If you have Ollama running locally, send the same question with `provider: "openai"` and then `provider: "ollama"` to see how a hosted vs local model handles the same retrieved context — a nice screenshot for the README.
+
+---
+
 ## API surface
 
 | Method | Path                       | Purpose                                                  |
